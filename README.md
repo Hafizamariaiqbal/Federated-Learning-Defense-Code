@@ -8,8 +8,6 @@ pip install flwr torch torchvision scikit-learn
  
 
 # 1. Define the model and client
- 
-
 import flwr as fl  
 import torch  
 import torch.nn as nn  
@@ -34,6 +32,7 @@ class SimpleNet(nn.Module):
 
 # 2. Flower Client
  
+
 
 class FlowerClient(fl.client.NumPyClient):  
     def __init__(self, model, trainloader, testloader):  
